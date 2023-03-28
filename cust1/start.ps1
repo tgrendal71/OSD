@@ -21,3 +21,10 @@ switch ($input)
     '8' { Start-OSDCloud	} 
     '9' { Exit		}
 }
+
+
+#   Restart-Computer
+#=======================================================================
+Write-Host  -ForegroundColor Green "Restarting in 20 seconds!"
+Start-Sleep -Seconds 20
+wpeutil reboot
