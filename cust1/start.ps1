@@ -11,8 +11,8 @@ Write-Host "9: Exit`n"-ForegroundColor Yellow
 $input = Read-Host "Please make a selection"
 
 Write-Host "Loading OSDCloud..." -BackgroundColor Gray
-Import-Module OSD -Force
-Install-Module OSD -Force
+#Import-Module OSD -Force
+#Install-Module OSD -Force
 
 switch ($input)
 {
