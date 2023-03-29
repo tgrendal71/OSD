@@ -16,8 +16,8 @@ Install-Module OSD -Force
 
 switch ($input)
 {
-    '1' { Start-OSDCloud -OSLanguage da-dk -OSVersion "Windows 10" -OSBuild 22H2 -OSEdition Enterprise -ZTI } 
-    '2' { Start-OSDCloud -OSLanguage da-dk -OSVersion "Windows 11" -OSBuild 22H2 -OSEdition Enterprise -ZTI } 
+    '1' { Start-OSDCloud -OSLanguage nb-no -OSVersion 'Windows 10' -OSBuild 22H2 -OSEdition Enterprise -ZTI } 
+    '2' { Start-OSDCloud -OSLanguage nb-no -OSVersion 'Windows 11' -OSBuild 22H2 -OSEdition Enterprise -ZTI } 
     '8' { Start-OSDCloud } 
     '9' { Exit }
 }
