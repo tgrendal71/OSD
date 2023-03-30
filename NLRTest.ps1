@@ -336,8 +336,8 @@ $VerbosePreference = "SilentlyContinue"
 [string]$Menytittel = `
 
 "======================= NLR =========================================`r`n" + `
-"======== Velg Windows versjon som skal installeres på maskinen ========`r`n" + `
-"======================================================================="
+"======== Velg Windows versjon som skal installeres på maskinen ======`r`n" + `
+"====================================================================="
 
 [array]$MenyValg = @(
 "1: Zero-Touch Win11 22H2      | Standard NLR image     | Norsk",
