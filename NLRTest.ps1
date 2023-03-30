@@ -340,7 +340,7 @@ $VerbosePreference = "SilentlyContinue"
 "======================================================================="
 
 [array]$MenyValg = @(
-"1: Zero-Touch Win11 22H2      | Standard Evidi image     | Norsk",
+"1: Zero-Touch Win11 22H2      | Standard NLR image     | Norsk",
 "8: Start OSDCloud GUI (custom)| ",
 "9: Exit"
 )
@@ -362,15 +362,13 @@ switch ($input)
         Write-Host  -ForegroundColor Yellow "Starter NLR Windows 11 tanking..."
         RemoveUSBDrive
         Start-OSDCloud -OSLanguage nb-no -OSVersion "Windows 11" -OSBuild 22H2 -OSEdition Enterprise -ZTI
-        
       } 
- 8    {
+    8    
+      {
         Write-Host  -ForegroundColor Yellow "Starter OSDCloud GUI.."
         RemoveUSBDrive
         Start-OSDCloudGui -Brand "NLR"
       }
-   
-      
     9 {
         Write-Host  -ForegroundColor Yellow "Feiger ut..."
       }
