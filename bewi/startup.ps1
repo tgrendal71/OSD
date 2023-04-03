@@ -335,14 +335,16 @@ $VerbosePreference = "SilentlyContinue"
 
 [string]$Menytittel = `
 
-"======================= BEWI =========================================`r`n" + `
-"======== Velg Windows versjon som skal installeres på maskinen =======`r`n" + `
-"======================================================================"
+"======================= EVIDI =========================================`r`n" + `
+"======== Velg Windows versjon som skal installeres på maskinen ========`r`n" + `
+"======================================================================="
 
 [array]$MenyValg = @(
-"1: Zero-Touch Win10 22H2      | Standard BEWI image     | Svensk",
-"8: Start OSDCloud GUI (custom)| ",
-"9: Exit"
+"1: Zero-Touch Win10 22H2      | Standard BEWI image     | Norsk",
+"2: Zero-Touch Win11 22H2      | Standard BEWI image     | Engelsk",
+"3: Zero-Touch Win11 22H2      | Standard BEWI image     | Dansk",
+"4: Start OSDCloud GUI (custom)| ",
+"5: Exit"
 )
 [int]$MaksBredde = 0
 foreach ($valg in $MenyValg) {
@@ -359,17 +361,30 @@ $input = Create-Menu -MenuTitle $Menytittel -MenuOptions $MenyValg -Columns 1 -M
 switch ($input)
 {
     0 {
-        Write-Host  -ForegroundColor Yellow "Starter BEWI Windows 11 tanking..."
+        Write-Host  -ForegroundColor Yellow "Starter Evidi Windows 11 tanking..."
         RemoveUSBDrive
-        Start-OSDCloud -OSLanguage nb-no -OSVersion "Windows 11" -OSBuild 22H2 -OSEdition Enterprise -ZTI
+        Start-OSDCloud -Firmware -ImageFileUrl 'https://evisaosdstorage001.blob.core.windows.net/public/install-NO.wim' -ZTI -ImageIndex 5
+        
       } 
-    8    
-      {
+    1 {
+        Write-Host  -ForegroundColor Yellow "Starter Evidi Windows 11 tanking..."
+        RemoveUSBDrive
+        Start-OSDCloud -Firmware -ImageFileUrl 'https://evisaosdstorage001.blob.core.windows.net/public/install-US.wim' -ZTI -ImageIndex 5
+      } 
+    2 {
+        Write-Host  -ForegroundColor Yellow "Starter Evidi Windows 11 tanking..."
+        RemoveUSBDrive
+        Start-OSDCloud -Firmware -ImageFileUrl 'https://evisaosdstorage001.blob.core.windows.net/public/install-DK.wim' -ZTI -ImageIndex 5
+        
+      }
+ 3    {
         Write-Host  -ForegroundColor Yellow "Starter OSDCloud GUI.."
         RemoveUSBDrive
-        Start-OSDCloudGui -Brand "BEWI"
+        Start-OSDCloudGui -Brand "EVIDI"
       }
-    9 {
+   
+      
+    4 {
         Write-Host  -ForegroundColor Yellow "Feiger ut..."
       }
 }
@@ -379,4 +394,3 @@ Write-Host -ForegroundColor Green "Restarter om 5 sekunder!"
 Start-Sleep -Seconds 5
 
 wpeutil reboot
-
