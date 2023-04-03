@@ -343,7 +343,7 @@ $VerbosePreference = "SilentlyContinue"
 "1: Zero-Touch Win10 22H2      | Standard BEWI image     | Svensk",
 #"2: Zero-Touch Win11 22H2      | Standard BEWI image     | Svensk",
 #"4: Zero-Touch Win10 22H2      | Standard BEWI image     | Engelsk",
-#"5: Zero-Touch Win11 22H2      | Standard BEWI image     | Engelsk"
+#"5: Zero-Touch Win11 22H2      | Standard BEWI image     | Engelsk",
 "8: Start OSDCloud GUI (custom)| ",
 "9: Exit"
 )
