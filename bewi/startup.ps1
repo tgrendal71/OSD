@@ -335,16 +335,21 @@ $VerbosePreference = "SilentlyContinue"
 
 [string]$Menytittel = `
 
-"======================= EVIDI =========================================`r`n" + `
-"======== Velg Windows versjon som skal installeres på maskinen ========`r`n" + `
-"======================================================================="
+"======================= BEWI =========================================`r`n" + `
+"===== Select the Windows version to be installed on the machine ======`r`n" + `
+"======================================================================"
 
 [array]$MenyValg = @(
-"1: Zero-Touch Win10 22H2      | Standard BEWI image     | Norsk",
-"2: Zero-Touch Win11 22H2      | Standard BEWI image     | Engelsk",
-"3: Zero-Touch Win11 22H2      | Standard BEWI image     | Dansk",
-"4: Start OSDCloud GUI (custom)| ",
-"5: Exit"
+"1: Zero-Touch Win10 22H2      | Standard BEWI image     | Norwegian",
+"2: Zero-Touch Win10 22H2      | Standard BEWI image     | Swedish",
+"3: Zero-Touch Win10 22H2      | Standard BEWI image     | Danish",
+"4: Zero-Touch Win10 22H2      | Standard BEWI image     | English",
+"5: Zero-Touch Win11 22H2      | Standard BEWI image     | Norwegian",
+"6: Zero-Touch Win11 22H2      | Standard BEWI image     | Swedish",
+"7: Zero-Touch Win11 22H2      | Standard BEWI image     | Danish",
+"8: Zero-Touch Win11 22H2      | Standard BEWI image     | English",
+"9: Start OSDCloud GUI (custom)| ",
+"E: Exit"
 )
 [int]$MaksBredde = 0
 foreach ($valg in $MenyValg) {
@@ -413,15 +418,15 @@ switch ($input)
         Start-OSDCloud -OSLanguage en-gb -OSVersion "Windows 10" -OSBuild 22H2 -OSEdition Enterprise -ZTI
         
       }
-    3 {
+    9 {
         Write-Host  -ForegroundColor gray "Starter OSDCloud GUI.."
         RemoveUSBDrive
-        Start-OSDCloudGui -Brand "EVIDI"
+        Start-OSDCloudGui -Brand "BEWI"
       }
    
       
-    4 {
-        Write-Host  -ForegroundColor Yellow "Feiger ut..."
+    E {
+        Write-Host  -ForegroundColor Yellow "Exit..."
       }
 }
 
