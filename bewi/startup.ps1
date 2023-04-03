@@ -361,24 +361,60 @@ $input = Create-Menu -MenuTitle $Menytittel -MenuOptions $MenyValg -Columns 1 -M
 switch ($input)
 {
     0 {
-        Write-Host  -ForegroundColor Yellow "Starter Evidi Windows 10 tanking..."
+        Write-Host  -ForegroundColor Yellow "Starter BEWI Windows 10 Norsk tanking..."
         RemoveUSBDrive
-        Start-OSDCloud -OSLanguage sv-se -OSVersion "Windows 10" -OSBuild 22H2 -OSEdition Enterprise -ZTI
+        Start-OSDCloud -OSLanguage nb-no -OSVersion "Windows 10" -OSBuild 22H2 -OSEdition Enterprise -ZTI
         
       } 
     1 {
-        Write-Host  -ForegroundColor Yellow "Starter Evidi Windows 11 tanking..."
+        Write-Host  -ForegroundColor Yellow "Starter BEWI Windows 10 Svensk tanking..."
         RemoveUSBDrive
-        Start-OSDCloud -OSLanguage sv-se -OSVersion "Windows 11" -OSBuild 22H2 -OSEdition Enterprise -ZTI
+        Start-OSDCloud -OSLanguage sv-se -OSVersion "Windows 10" -OSBuild 22H2 -OSEdition Enterprise -ZTI
       } 
     2 {
-        Write-Host  -ForegroundColor Yellow "Starter Evidi Windows 11 tanking..."
+        Write-Host  -ForegroundColor Yellow "Starter BEWI Windows Dansk 10 tanking..."
+        RemoveUSBDrive
+        Start-OSDCloud -OSLanguage da-dk -OSVersion "Windows 10" -OSBuild 22H2 -OSEdition Enterprise -ZTI
+        
+      }
+     3 {
+        Write-Host  -ForegroundColor Yellow "Starter BEWI Windows Dansk 10 tanking..."
+        RemoveUSBDrive
+        Start-OSDCloud -OSLanguage da-dk -OSVersion "Windows 10" -OSBuild 22H2 -OSEdition Enterprise -ZTI
+        
+      }
+     4 {
+        Write-Host  -ForegroundColor Yellow "Starter BEWI Windows Engelsk 10 tanking..."
+        RemoveUSBDrive
+        Start-OSDCloud -OSLanguage en-gb -OSVersion "Windows 10" -OSBuild 22H2 -OSEdition Enterprise -ZTI
+        
+      }
+     5 {
+        Write-Host  -ForegroundColor Cyan "Starter Evidi Windows Dansk 11 tanking..."
+        RemoveUSBDrive
+        Start-OSDCloud -OSLanguage nb-no -OSVersion "Windows 11" -OSBuild 22H2 -OSEdition Enterprise -ZTI
+        
+      }
+     6 {
+        Write-Host  -ForegroundColor Cyan "Starter BEWI Windows Svensk 11 tanking..."
         RemoveUSBDrive
         Start-OSDCloud -OSLanguage sv-se -OSVersion "Windows 11" -OSBuild 22H2 -OSEdition Enterprise -ZTI
         
       }
- 3    {
-        Write-Host  -ForegroundColor Yellow "Starter OSDCloud GUI.."
+     7 {
+        Write-Host  -ForegroundColor Cyan "Starter BEWI Windows Dansk 11 tanking..."
+        RemoveUSBDrive
+        Start-OSDCloud -OSLanguage da-dk -OSVersion "Windows 11" -OSBuild 22H2 -OSEdition Enterprise -ZTI
+        
+      }
+     8 {
+        Write-Host  -ForegroundColor Cyan "Starter BEWI Windows Engelsk 11 tanking..."
+        RemoveUSBDrive
+        Start-OSDCloud -OSLanguage en-gb -OSVersion "Windows 10" -OSBuild 22H2 -OSEdition Enterprise -ZTI
+        
+      }
+    3 {
+        Write-Host  -ForegroundColor gray "Starter OSDCloud GUI.."
         RemoveUSBDrive
         Start-OSDCloudGui -Brand "EVIDI"
       }
