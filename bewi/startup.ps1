@@ -340,7 +340,10 @@ $VerbosePreference = "SilentlyContinue"
 "======================================================================"
 
 [array]$MenyValg = @(
-"1: Zero-Touch Win11 22H2      | Standard NLR image     | Norsk",
+"1: Zero-Touch Win10 22H2      | Standard BEWI image     | Svensk",
+"2: Zero-Touch Win11 22H2      | Standard BEWI image     | Svensk",
+"4: Zero-Touch Win10 22H2      | Standard BEWI image     | Engelsk",
+"5: Zero-Touch Win11 22H2      | Standard BEWI image     | Engelsk"
 "8: Start OSDCloud GUI (custom)| ",
 "9: Exit"
 )
@@ -359,10 +362,25 @@ $input = Create-Menu -MenuTitle $Menytittel -MenuOptions $MenyValg -Columns 1 -M
 switch ($input)
 {
     0 {
+        Write-Host  -ForegroundColor Yellow "Starter BEWI Windows 10 tanking..."
+        RemoveUSBDrive
+        Start-OSDCloud -OSLanguage sv-se -OSVersion "Windows 10" -OSBuild 22H2 -OSEdition Enterprise -ZTI
+      } 
+    1 {
         Write-Host  -ForegroundColor Yellow "Starter BEWI Windows 11 tanking..."
         RemoveUSBDrive
-        Start-OSDCloud -OSLanguage nb-no -OSVersion "Windows 11" -OSBuild 22H2 -OSEdition Enterprise -ZTI
-      } 
+        Start-OSDCloud -OSLanguage sv-se -OSVersion "Windows 11" -OSBuild 22H2 -OSEdition Enterprise -ZTI
+      }
+     2 {
+        Write-Host  -ForegroundColor Yellow "Starter BEWI Windows 10 (Engelsk) tanking..."
+        RemoveUSBDrive
+        Start-OSDCloud -OSLanguage en-gb -OSVersion "Windows 10" -OSBuild 22H2 -OSEdition Enterprise -ZTI
+      }
+     3 {
+        Write-Host  -ForegroundColor Yellow "Starter BEWI Windows 11 (Engelsk) tanking..."
+        RemoveUSBDrive
+        Start-OSDCloud -OSLanguage en-gb -OSVersion "Windows 11" -OSBuild 22H2 -OSEdition Enterprise -ZTI
+      }
     8    
       {
         Write-Host  -ForegroundColor Yellow "Starter OSDCloud GUI.."
@@ -379,3 +397,4 @@ Write-Host -ForegroundColor Green "Restarter om 5 sekunder!"
 Start-Sleep -Seconds 5
 
 wpeutil reboot
+
