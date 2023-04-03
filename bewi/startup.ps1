@@ -361,20 +361,20 @@ $input = Create-Menu -MenuTitle $Menytittel -MenuOptions $MenyValg -Columns 1 -M
 switch ($input)
 {
     0 {
-        Write-Host  -ForegroundColor Yellow "Starter Evidi Windows 11 tanking..."
+        Write-Host  -ForegroundColor Yellow "Starter Evidi Windows 10 tanking..."
         RemoveUSBDrive
-        Start-OSDCloud -Firmware -ImageFileUrl 'https://evisaosdstorage001.blob.core.windows.net/public/install-NO.wim' -ZTI -ImageIndex 5
+        Start-OSDCloud -OSLanguage sv-se -OSVersion "Windows 10" -OSBuild 22H2 -OSEdition Enterprise -ZTI
         
       } 
     1 {
         Write-Host  -ForegroundColor Yellow "Starter Evidi Windows 11 tanking..."
         RemoveUSBDrive
-        Start-OSDCloud -Firmware -ImageFileUrl 'https://evisaosdstorage001.blob.core.windows.net/public/install-US.wim' -ZTI -ImageIndex 5
+        Start-OSDCloud -OSLanguage sv-se -OSVersion "Windows 11" -OSBuild 22H2 -OSEdition Enterprise -ZTI
       } 
     2 {
         Write-Host  -ForegroundColor Yellow "Starter Evidi Windows 11 tanking..."
         RemoveUSBDrive
-        Start-OSDCloud -Firmware -ImageFileUrl 'https://evisaosdstorage001.blob.core.windows.net/public/install-DK.wim' -ZTI -ImageIndex 5
+        Start-OSDCloud -OSLanguage sv-se -OSVersion "Windows 11" -OSBuild 22H2 -OSEdition Enterprise -ZTI
         
       }
  3    {
