@@ -20,6 +20,7 @@ Write-Host -ForegroundColor Green “Updating OSD PowerShell Module”
 Install-Module OSD -Force
 
 Write-Host -ForegroundColor Green “Importing OSD PowerShell Module”
+pause
 
 ##================================================
 ##  [PostOS] SetupComplete CMD Command Line
@@ -30,7 +31,10 @@ Write-Host -ForegroundColor Green “Importing OSD PowerShell Module”
 #XCOPY '.\OSDCloud\Config\Scripts\Files\BEWI SE Standard Deployment.json'  .\OSDCloud\Config\Autopilot.json  /E /H /C /I /Y
 #'@
 #$SetupCompleteCMD | Out-File -FilePath '.\OSDCloud\Config\Scripts\\SetupComplete.cmd' -Encoding ascii -Force
-
+PowerShell -NoL -Com Set-ExecutionPolicy RemoteSigned -Force
+Set Path = %PATH%;C:\Program Files\WindowsPowerShell\Scripts
+Start /Wait PowerShell -NoL -C Install-Module OSD -Force -Verbose
+Start /Wait PowerShell -NoL -C Invoke-WebPSScript https://raw.githubusercontent.com/tgrendal71/OSD/main/bewi/copyse.ps1
 
 #================================================
 #  [PostOS] SetupComplete CMD Command Line
