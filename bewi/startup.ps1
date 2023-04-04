@@ -349,7 +349,7 @@ $VerbosePreference = "SilentlyContinue"
 "7: Zero-Touch Win11 22H2      | Standard BEWI image     | Danish",
 "8: Zero-Touch Win11 22H2      | Standard BEWI image     | English",
 "9: Start OSDCloud GUI (custom)| ",
-"E: Exit"
+"e: Exit"
 )
 [int]$MaksBredde = 0
 foreach ($valg in $MenyValg) {
@@ -382,50 +382,44 @@ switch ($input)
         Start-OSDCloud -OSLanguage da-dk -OSVersion "Windows 10" -OSBuild 22H2 -OSEdition Enterprise -ZTI
         
       }
-     3 {
-        Write-Host  -ForegroundColor Yellow "Starter BEWI Windows Dansk 10 tanking..."
-        RemoveUSBDrive
-        Start-OSDCloud -OSLanguage da-dk -OSVersion "Windows 10" -OSBuild 22H2 -OSEdition Enterprise -ZTI
-        
-      }
-     4 {
+    3 {
         Write-Host  -ForegroundColor Yellow "Starter BEWI Windows Engelsk 10 tanking..."
         RemoveUSBDrive
         Start-OSDCloud -OSLanguage en-gb -OSVersion "Windows 10" -OSBuild 22H2 -OSEdition Enterprise -ZTI
         
       }
-     5 {
-        Write-Host  -ForegroundColor Cyan "Starter Evidi Windows Dansk 11 tanking..."
+    4 {
+        Write-Host  -ForegroundColor Cyan "Starter BEWI Windows Norsk 11 tanking..."
         RemoveUSBDrive
         Start-OSDCloud -OSLanguage nb-no -OSVersion "Windows 11" -OSBuild 22H2 -OSEdition Enterprise -ZTI
         
       }
-     6 {
+    5 {
         Write-Host  -ForegroundColor Cyan "Starter BEWI Windows Svensk 11 tanking..."
         RemoveUSBDrive
         Start-OSDCloud -OSLanguage sv-se -OSVersion "Windows 11" -OSBuild 22H2 -OSEdition Enterprise -ZTI
         
       }
-     7 {
+    6 {
         Write-Host  -ForegroundColor Cyan "Starter BEWI Windows Dansk 11 tanking..."
         RemoveUSBDrive
         Start-OSDCloud -OSLanguage da-dk -OSVersion "Windows 11" -OSBuild 22H2 -OSEdition Enterprise -ZTI
         
       }
-     8 {
+    7 {
         Write-Host  -ForegroundColor Cyan "Starter BEWI Windows Engelsk 11 tanking..."
         RemoveUSBDrive
         Start-OSDCloud -OSLanguage en-gb -OSVersion "Windows 10" -OSBuild 22H2 -OSEdition Enterprise -ZTI
         
       }
-    9 {
+    8 {
         Write-Host  -ForegroundColor gray "Starter OSDCloud GUI.."
         RemoveUSBDrive
         Start-OSDCloudGui -Brand "BEWI"
       }
    
       
-    E {
+    e {
         Write-Host  -ForegroundColor Yellow "Exit..."
       }
 }
