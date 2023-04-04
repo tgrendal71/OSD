@@ -12,7 +12,7 @@ if ((Get-MyComputerModel) -match 'Virtual') {
     Set-DisRes 1600
 }
 
-
+Start-Sleep -Seconds 20
 
 ##Make sure I have the latest OSD Content
 
