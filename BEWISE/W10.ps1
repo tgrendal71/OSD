@@ -11,3 +11,15 @@ if ((Get-MyComputerModel) -match 'Virtual') {
     Write-Host  -ForegroundColor Green "Setting Display Resolution to 1600x"
     Set-DisRes 1600
 }
+#=======================================================================
+#   [OS] Params and Start-OSDCloud
+#=======================================================================
+$Params = @{
+    OSVersion = "Windows 10"
+    OSBuild = "22H2"
+    OSEdition = "Enterprise"
+    OSLanguage = "sv-se"
+    ZTI = $true
+    Firmware = $false
+}
+Start-OSDCloud @Params
