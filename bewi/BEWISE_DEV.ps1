@@ -21,16 +21,30 @@ Install-Module OSD -Force
 
 Write-Host -ForegroundColor Green “Importing OSD PowerShell Module”
 
+##================================================
+##  [PostOS] SetupComplete CMD Command Line
+##================================================
+#Write-Host -ForegroundColor Green "Create .\OSDCloud\Config\Scripts\copyapprofile.cmd"
+#$SetupCompleteCMD = @'
+#RD C:\OSDCloud\OS /S /Q
+#XCOPY '.\OSDCloud\Config\Scripts\Files\BEWI SE Standard Deployment.json'  .\OSDCloud\Config\Autopilot.json  /E /H /C /I /Y
+#'@
+#$SetupCompleteCMD | Out-File -FilePath '.\OSDCloud\Config\Scripts\\SetupComplete.cmd' -Encoding ascii -Force
+
+
 #================================================
 #  [PostOS] SetupComplete CMD Command Line
 #================================================
-Write-Host -ForegroundColor Green "Create .\OSDCloud\Config\Scripts\copyapprofile.cmd"
+Write-Host -ForegroundColor Green "Create C:\Windows\Setup\Scripts\SetupComplete.cmd"
 $SetupCompleteCMD = @'
 RD C:\OSDCloud\OS /S /Q
-XCOPY '.\OSDCloud\Config\Scripts\Files\BEWI SE Standard Deployment.json'  .\OSDCloud\Config\Autopilot.json  /E /H /C /I /Y
+XCOPY C:\OSDCloud\ C:\ProgramData\Microsoft\IntuneManagementExtension\Logs\OSD /E /H /C /I /Y
+XCOPY C:\ProgramData\OSDeploy C:\ProgramData\Microsoft\IntuneManagementExtension\Logs\OSD /E /H /C /I /Y
+RD C:\OSDCloud /S /Q
+RD C:\Drivers /S /Q
+RD C:\Temp /S /Q
 '@
-$SetupCompleteCMD | Out-File -FilePath '.\OSDCloud\Config\Scripts\\SetupComplete.cmd' -Encoding ascii -Force
-
+$SetupCompleteCMD | Out-File -FilePath 'C:\Windows\Setup\Scripts\SetupComplete.cmd' -Encoding ascii -Force
 
 Import-Module OSD -Force
 
