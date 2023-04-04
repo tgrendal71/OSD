@@ -340,14 +340,10 @@ $VerbosePreference = "SilentlyContinue"
 "======================================================================"
 
 [array]$MenyValg = @(
-"1: Zero-Touch Win10 22H2      | Standard BEWI image     | Norwegian",
-"2: Zero-Touch Win10 22H2      | Standard BEWI image     | Swedish",
-"3: Zero-Touch Win10 22H2      | Standard BEWI image     | Danish",
-"4: Zero-Touch Win10 22H2      | Standard BEWI image     | English",
-"5: Zero-Touch Win11 22H2      | Standard BEWI image     | Norwegian",
-"6: Zero-Touch Win11 22H2      | Standard BEWI image     | Swedish",
-"7: Zero-Touch Win11 22H2      | Standard BEWI image     | Danish",
-"8: Zero-Touch Win11 22H2      | Standard BEWI image     | English",
+"1: Zero-Touch Win10 22H2      | Standard BEWI image     | Swedish",
+"2: Zero-Touch Win11 22H2      | Standard BEWI image     | Swedish",
+"3: Zero-Touch Win10 22H2      | Standard BEWI image     | English",
+"4: Zero-Touch Win11 22H2      | Standard BEWI image     | English",
 "9: Start OSDCloud GUI (custom)| ",
 "e: Exit"
 )
