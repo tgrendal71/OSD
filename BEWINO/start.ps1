@@ -340,8 +340,8 @@ $VerbosePreference = "SilentlyContinue"
 "======================================================================"
 
 [array]$MenyValg = @(
-"1: Zero-Touch Win10 22H2      | Standard BEWI image     | Swedish",
-"2: Zero-Touch Win11 22H2      | Standard BEWI image     | Swedish",
+"1: Zero-Touch Win10 22H2      | Standard BEWI image     | Norwegian",
+"2: Zero-Touch Win11 22H2      | Standard BEWI image     | Norwegian",
 "3: Zero-Touch Win10 22H2      | Standard BEWI image     | English",
 "4: Zero-Touch Win11 22H2      | Standard BEWI image     | English",
 "9: Start OSDCloud GUI (custom)| ",
@@ -364,13 +364,13 @@ switch ($input)
     0 {
         Write-Host  -ForegroundColor Yellow "Starter BEWI Windows 10 Norway deployment..."
         RemoveUSBDrive
-        Start-OSDCloud -OSLanguage sv-se -OSVersion "Windows 10" -OSBuild 22H2 -OSEdition Enterprise -ZTI
+        Start-OSDCloud -OSLanguage nb-no -OSVersion "Windows 10" -OSBuild 22H2 -OSEdition Enterprise -ZTI
         
       } 
     1 {
         Write-Host  -ForegroundColor Yellow "Starter BEWI Windows 11 Norway deployment..."
         RemoveUSBDrive
-        Start-OSDCloud -OSLanguage sv-se -OSVersion "Windows 11" -OSBuild 22H2 -OSEdition Enterprise -ZTI
+        Start-OSDCloud -OSLanguage nb-no -OSVersion "Windows 11" -OSBuild 22H2 -OSEdition Enterprise -ZTI
       } 
     2 {
         Write-Host  -ForegroundColor Yellow "Starter BEWI Windows English 10 deployment..."
