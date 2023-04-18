@@ -315,7 +315,7 @@ Function RemoveUSBDrive {
 
 
 
-Start-Transcript -Path c:\OSDCloud\debugmenu.log -ErrorAction SilentlyContinue
+#Start-Transcript -Path c:\OSDCloud\debugmenu.log -ErrorAction SilentlyContinue
 cls
 Write-Host -ForegroundColor Green "Starter OSDCloud menyen.."
 
