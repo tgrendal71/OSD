@@ -362,13 +362,8 @@ switch ($input)
     0 {
         Write-Host  -ForegroundColor Yellow "Starter NLR Windows 11 tanking..."
         RemoveUSBDrive
-        Start-OSDCloud -Firmware -ImageFileUrl 'https://evisaosdstorage001.blob.core.windows.net/public/install-NO.wim' -ZTI -ImageIndex 5
+        Start-OSDCloud -OSLanguage nb-no -OSVersion "Windows 11" -OSBuild 22H2 -OSEdition Enterprise -ZTI
         
-      } 
-    1 {
-        Write-Host  -ForegroundColor Yellow "Starter NLR Windows 11 tanking..."
-        RemoveUSBDrive
-        Start-OSDCloud -Firmware -ImageFileUrl 'https://evisaosdstorage001.blob.core.windows.net/public/install-US.wim' -ZTI -ImageIndex 5
       } 
       
     2 {
