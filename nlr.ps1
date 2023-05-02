@@ -336,7 +336,7 @@ $VerbosePreference = "SilentlyContinue"
 
 [string]$Menytittel = `
 
-"======================= EVIDI =========================================`r`n" + `
+"======================= Norsk Landbruksrådgiving ======================`r`n" + `
 "======== Velg Windows versjon som skal installeres på maskinen ========`r`n" + `
 "======================================================================="
 
