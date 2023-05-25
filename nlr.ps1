@@ -362,7 +362,7 @@ switch ($input)
     0 {
         Write-Host  -ForegroundColor Yellow "Starter NLR Windows 11 tanking..."
         RemoveUSBDrive
-        Start-OSDCloud -OSLanguage nb-no -OSVersion "Windows 10" -OSBuild 22H2 -OSEdition Enterprise -ZTI
+        Start-OSDCloud -OSLanguage nb-no -OSVersion "Windows 11" -OSBuild 22H2 -OSEdition Enterprise -ZTI
         
       } 
       
