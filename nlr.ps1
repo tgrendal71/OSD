@@ -336,9 +336,9 @@ $VerbosePreference = "SilentlyContinue"
 
 [string]$Menytittel = `
 
-"==================================== NLR ==============================`r`n" + `
-"======== Velg Windows versjon som skal installeres på maskinen ========`r`n" + `
-"======================================================================="
+"============================== NLR ========================`r`n" + `
+"======== Velg Windows versjon som skal installeres ========`r`n" + `
+"==========================================================="
 
 [array]$MenyValg = @(
 "1: Innstaller Windows 11 22H2      | Standard NLR image     | Norsk",
