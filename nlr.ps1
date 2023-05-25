@@ -336,14 +336,14 @@ $VerbosePreference = "SilentlyContinue"
 
 [string]$Menytittel = `
 
-"======================= Norsk Landbruksrådgiving ======================`r`n" + `
+"==================================== NLR ==============================`r`n" + `
 "======== Velg Windows versjon som skal installeres på maskinen ========`r`n" + `
 "======================================================================="
 
 [array]$MenyValg = @(
-"1: Zero-Touch Win11 22H2      | Standard NLR image     | Norsk",
-"2: Start OSDCloud GUI (custom)| ",
-"5: Exit"
+"1: Innstaller Windows 11 22H2      | Standard NLR image     | Norsk",
+"2: Innstaller Windows 10 22H2      | Standard NLR image     | Norsk"
+
 )
 [int]$MaksBredde = 0
 foreach ($valg in $MenyValg) {
@@ -362,12 +362,14 @@ switch ($input)
     0 {
         Write-Host  -ForegroundColor Yellow "Starter NLR Windows 11 tanking..."
         RemoveUSBDrive
-        Start-OSDCloud -OSLanguage nb-no -OSVersion "Windows 11" -OSBuild 22H2 -OSEdition Enterprise -ZTI
+        Start-OSDCloud -OSLanguage nb-no -OSVersion "Windows 10" -OSBuild 22H2 -OSEdition Enterprise -ZTI
         
       } 
       
     2 {
-        Write-Host  -ForegroundColor Yellow "Feiger ut..."
+        Write-Host  -ForegroundColor Yellow "Starter NLR Windows 10 tanking..."
+        RemoveUSBDrive
+        Start-OSDCloud -OSLanguage nb-no -OSVersion "Windows 10" -OSBuild 22H2 -OSEdition Enterprise -ZTI
       }
 }
 
