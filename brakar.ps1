@@ -360,14 +360,14 @@ $input = Create-Menu -MenuTitle $Menytittel -MenuOptions $MenyValg -Columns 1 -M
 switch ($input)
 {
     0 {
-        Write-Host  -ForegroundColor Yellow "Starter NLR Windows 11 tanking..."
+        Write-Host  -ForegroundColor Yellow "Starter Brakar Windows 11 tanking..."
         RemoveUSBDrive
         Start-OSDCloud -OSLanguage nb-no -OSVersion "Windows 11" -OSBuild 22H2 -OSEdition Enterprise -ZTI
         
       } 
       
     2 {
-        Write-Host  -ForegroundColor Yellow "Starter NLR Windows 10 tanking..."
+        Write-Host  -ForegroundColor Yellow "Starter Brakar Windows 10 tanking..."
         RemoveUSBDrive
         Start-OSDCloud -OSLanguage nb-no -OSVersion "Windows 10" -OSBuild 22H2 -OSEdition Enterprise -ZTI
       }
